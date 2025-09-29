@@ -4,6 +4,20 @@ A strategic guide for deploying Microsoft Defender for Cloud Apps across multi-c
 
 ----------------------------------------------------------------------------------------------
 
+Key Objectives:
+
+1) Improve security posture through enhanced threat detection.
+
+2) Increase Secure Score across all workloads.
+
+3) Meet compliance and regulatory requirements
+
+4) Implement automated threat response workflows.
+
+5) Establish unified security management across multi-cloud infrastructure.
+
+----------------------------------------------------------------------------------------------
+
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/e2ac998f-4450-4e75-9b73-73de7b9d9e2f" />
 
 
@@ -139,6 +153,8 @@ Objectives:
 
 ***3. Architecture Overview***
 
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/66cf1f51-846c-44be-8666-45e899f4f08e" />
+
 🔹 Azure Workloads
 
 ⚙️ Defender for Servers, Defender for SQL, Defender for App Services enabled.
@@ -181,6 +197,14 @@ Objectives:
 
 Enabled Defender Plans for all Azure workloads:
 
+1) Navigate to Microsoft Defender for Cloud in Azure Portal portal.azure.com
+
+2) Select Environment settings from the left menu
+
+3) Choose your subscription (eg. CSP, Pay As You Go)
+
+Enable the following Defender plans:
+
 ⚙️ Defender for Servers
 
 ⚙️ Defender for SQL Databases
@@ -193,11 +217,41 @@ Enabled Defender Plans for all Azure workloads:
 
 ⚙️ Configured Just-in-Time (JIT) VM access.
 
-Applied adaptive application control & file integrity monitoring.
+⚙️ Applied adaptive application control & file integrity monitoring.
+
+Core Plans to Enable:
+
+<img width="623" height="352" alt="image" src="https://github.com/user-attachments/assets/2ebe6ec2-bcec-4312-839e-d447a23c8b2e" />
 
 2️⃣ Integrate Multi-Cloud & Hybrid Assets via Azure Arc
 
 ⚙️ Connected AWS accounts through Defender for Cloud’s AWS connector.
+
+1) Go to portal.azure.com and login with your tenant global admin credentials.
+
+2) Navigate to Microsoft Defender for Cloud.
+
+3) In Defender for Cloud, go to Environment settings.
+
+4) Click + Add environment → Select Amazon Web Services.
+
+5) Provide Connector details as below:
+
+    i) Connector name, Onboard (Management or Single Account option)
+
+    ii) Resource group
+
+   iii) Location
+
+   iv) AWS Account ID (found in AWS console under your profile).
+
+   v) Create a connector stackset name and cloudformation on AWS using the template from Azure.
+   - Download the cloudformation template
+   - Deploy the stack on AWS by navigating to create stack - upload a template file and use the downloaded cloudformation from azure.
+   - Provide the name of stack as ''DefenderConnectorStack'' and click on next - Review - Submit.
+
+<img width="889" height="570" alt="image" src="https://github.com/user-attachments/assets/049046d5-ad8e-42fe-949d-049507c00d51" />
+
 
 ⚙️ Onboarded VMware workloads using Azure Arc agents.
 
