@@ -2,7 +2,12 @@
 
 A strategic guide for deploying Microsoft Defender for Cloud Apps across multi-cloud and hybrid environments. Covers workload protection, posture management, automation, and compliance frameworks to improve secure score, meet regulatory standards, and strengthen enterprise security.
 
-------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/e2ac998f-4450-4e75-9b73-73de7b9d9e2f" />
+
+
+-----------------------------------------------------------------------------------------------
 
 🔐 Key Focus Areas:
 
